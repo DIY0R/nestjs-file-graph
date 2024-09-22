@@ -1,0 +1,82 @@
+{
+  "name": "nestjs-file-graph",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prettier": "prettier 'lib/**/**.{js,ts}' 'test/**/**.{js,ts}'  --check --ignore-unknown",
+    "prettier:fix": "prettier lib/**/**.{js,ts}' 'test/**/**.{js,ts}' -w",
+    "lint": "eslint",
+        "start": "nest start",
+    "lint:fix": "eslint --fix",
+    "prepare": "husky",
+    "release": "release-it"
+  },
+  "author": "Sobirov Diyorbek <sabirovdiyorkind@gmail.com>",
+  "license": "MIT",
+  "description": "Nestjs module for file-graph",
+  "devDependencies": {
+    "@nestjs/cli": "^10.0.0",
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/schematics": "^10.0.0",
+    "rxjs": "^7.8.1",
+    "ts-loader": "^9.4.3",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.11.0",
+    "@types/node": "^22.5.0",
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.9.0",
+    "husky": "^9.1.4",
+    "prettier": "^3.3.3",
+    "release-it": "^17.6.0",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.6.0"
+  }, 
+  "peerDependencies": {
+    "@nestjs/common": "^10.0.0"
+  },
+  "dependencies": {
+    "file-graph": "^0.12.1",
+    "reflect-metadata": "^0.2.0"
+  },
+
+  "overrides": {
+    "eslint": "^9.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DIY0R/nestjs-file-graph"
+  },
+  "homepage": "https://github.com/DIY0R/nestjs-file-graph",
+  "bugs": {
+    "url": "https://github.com/DIY0R/nestjs-file-graph/issues"
+  },
+  "keywords": [
+    "nestjs-file-graph",
+    "file-graph",
+    "ts",
+    "nestjs",
+    "graph"
+  ],
+  "npm": {
+    "publish": true
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": false
+}
