@@ -1,11 +1,11 @@
-import pluginJs from '@eslint/js';
-import globals from 'globals';
-import tseslint from 'typescript-eslint';
-import prettierPlugin from 'eslint-plugin-prettier';
-import eslintConfigPrettier from 'eslint-config-prettier';
+const pluginJs = require('@eslint/js');
+const globals = require('globals');
+const tseslint = require('typescript-eslint');
+const prettierPlugin = require('eslint-plugin-prettier');
+const eslintConfigPrettier = require('eslint-config-prettier');
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
-export default tseslint.config(
+module.exports = tseslint.config(
   {
     plugins: {
       '@typescript-eslint': tseslint.plugin,
@@ -16,6 +16,7 @@ export default tseslint.config(
     ignores: [
       'dist',
       'node_modules',
+      'jest.config.js',
       'coverage',
       'eslint.config.js',
       'commitlint.config.js',
